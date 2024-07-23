@@ -4,7 +4,7 @@ import App from "./App.tsx";
 import "./index.css";
 import { createTheme, ThemeProvider } from "@mui/material";    //adds material ui styling to the app
 import { BrowserRouter } from "react-router-dom";       //adds routing functionality to the app
-import { AuthProvider } from "./context/AuthContext.tsx";
+import { AuthProvider } from "./context/AuthContext";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:5000/api/v1";

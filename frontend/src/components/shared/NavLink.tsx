@@ -1,16 +1,23 @@
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 type Props = {
-    to : string;
-    bg : string;
-    text : string;
-    textstring : string;
-    onClick? : () => Promise<void>;
+  to: string;
+  bg: string;
+  text: string;
+  textColor: string;
+  onClick?: () => Promise<void>;
+};
+const NavLink = (props: Props) => {
+  return (
+    <Link
+      onClick={props.onClick}
+      className="nav-link"
+      to={props.to}
+      style={{ background: props.bg, color: props.textColor }}
+    >
+      {props.text}
+    </Link>
+  );
 };
 
-const NavLink = (props : Props) => {
-    return <Link to={props.to} className={`btn btn-${props.bg} btn-lg`}>{props.text} {props.textstring}</Link>
-
-
-const 
+export default NavLink;

@@ -8,9 +8,9 @@ import {
   import {
     checkAuthStatus,
     loginUser,
-    logoutUser,
+    // logoutUser,
     signupUser,
-  } from "../helpers/api-communicator";
+  } from "../helper/api-communicator";
   
   type User = {
     name: string;
