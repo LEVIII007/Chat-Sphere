@@ -25,6 +25,7 @@ export const userSignup = async (
   next: NextFunction
 ) => {
   try {
+    console.log("signup called");
     //user signup
     const { name, email, password } = req.body;
     const existingUser = await User.findOne({ email });

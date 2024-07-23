@@ -17,8 +17,6 @@ export const validate = (validations: ValidationChain[]) => {
   };
 };
 
-
-
 export const loginValidator = [
   body("email").trim().isEmail().withMessage("Email is required"),
   body("password")
